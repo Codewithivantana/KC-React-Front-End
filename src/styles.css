@@ -1,0 +1,156 @@
+
+
+:root {
+  --primary-color: yellow;
+  --navbar-text:back;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "san-serif";
+}
+
+a 
+{
+  text-decoration:none;
+  text-transform:capitalize;
+}
+.app-container {
+  max-width: 1000px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 100vh;
+}
+.nav-bar 
+{
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  min-width:100%;
+  height: 60px;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 100;
+
+}
+
+nav-bar .left 
+{
+  max-width:100px;
+
+}
+nav-bar .left a 
+{
+  display:block;
+  height: 100%;
+  max-width:100px;
+}
+
+.nav-bar .right a
+{
+  text-decoration:none;
+  margin:0 10px;
+  color: var(--nav-text)
+  text-transform:capitalize;
+
+}
+
+.nav-bar .left  a  img 
+{
+  height: 90%;
+  min-width:40px;
+}
+.nav-bar .left 
+{
+  padding: 0 .5rem 0 1rem;
+  height: 100%;
+  display:flex;
+  border-radius: 0 30px 30px 0;
+  align-items:center;
+  position: relative;
+ 
+
+  background-color: var(--primary-color)
+}
+
+.nav-bar .right
+{
+  padding: 0 1rem;
+  background-color:var(--primary-color);
+  height: 100%;
+  display:flex;
+  align-items:center;
+  border-radius:30px 0 0 30px;
+  position: relative;
+
+}
+
+.nav-bar .left:after 
+{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 100vmax var(--primary-color);
+  clip-path: inset(0 0 0 -100vmax);
+}
+
+.nav-bar .right:after
+{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 100vmax var(--primary-color);
+  clip-path: inset(0 -100vmax 0 0);
+  
+}
+
+
+.Hero 
+{
+  width:100%;
+  height: 80vh;
+
+  color:white;
+  position: relative;
+}
+
+.Hero .text 
+{
+  position: absolute;
+  top:40%;
+  left: 10%;
+  transform:translateY:(-50%);
+  width:60%;
+}
+
+.Hero:after 
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background-image: var(--hero-image);
+  clip-path: inset(0 -100vmax);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  filter: brightness(.4);
+}
